@@ -17,9 +17,4 @@ public class FacebookSearchStrategy implements Search {
         return null;
     }
 
-    public static void main(String[] args) {
-        APIBrandfetchStrategy apiBrandfetchStrategy = new APIBrandfetchStrategy();
-        apiBrandfetchStrategy.getInfo("ucu.edu.ua");
-        System.out.println(new FacebookSearchStrategy().search(apiBrandfetchStrategy.getData()));
-    }
 }

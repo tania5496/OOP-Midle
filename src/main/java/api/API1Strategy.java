@@ -19,8 +19,4 @@ public class API1Strategy implements API {
                 .asString();
         System.out.println(response.getBody());
     }
-
-    public static void main(String[] args) {
-        new API1Strategy().getInfo("ucu.edu.ua");
-    }
 }

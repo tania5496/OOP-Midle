@@ -20,10 +20,4 @@ public class APIBrandfetchStrategy implements API {
         JSONObject res = new JSONObject(response.getBody());
         this.data = res;
     }
-
-    public static void main(String[] args) {
-        APIBrandfetchStrategy apiBrandfetchStrategy = new APIBrandfetchStrategy();
-        apiBrandfetchStrategy.getInfo("ucu.edu.ua");
-        System.out.println(apiBrandfetchStrategy.getData());
-    }
 }
