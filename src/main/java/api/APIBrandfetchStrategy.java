@@ -1,11 +1,13 @@
-package info;
+package api;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
+import lombok.Getter;
 import lombok.SneakyThrows;
 import org.json.JSONObject;
 
-public class API2Strategy implements API{
+public class APIBrandfetchStrategy implements API {
+    @Getter
     private JSONObject data;
 
     @SneakyThrows
@@ -17,5 +19,11 @@ public class API2Strategy implements API{
                 .asString();
         JSONObject res = new JSONObject(response.getBody());
         this.data = res;
+    }
+
+    public static void main(String[] args) {
+        APIBrandfetchStrategy apiBrandfetchStrategy = new APIBrandfetchStrategy();
+        apiBrandfetchStrategy.getInfo("ucu.edu.ua");
+        System.out.println(apiBrandfetchStrategy.getData());
     }
 }
