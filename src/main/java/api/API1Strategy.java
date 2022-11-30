@@ -8,6 +8,7 @@ import java.net.http.HttpResponse;
 import org.json.JSONObject;
 
 public class API1Strategy implements API{
+    @Getter
     private JSONObject data;
 
     @SneakyThrows
