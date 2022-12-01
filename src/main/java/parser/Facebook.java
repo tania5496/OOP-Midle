@@ -1,5 +1,4 @@
-
-package org.example;
+package parser;
 import java.util.ArrayList;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
