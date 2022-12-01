@@ -1,5 +1,6 @@
-package info;
+package api;
 
+import lombok.Getter;
 import lombok.SneakyThrows;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -7,7 +8,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import org.json.JSONObject;
 
-public class API1Strategy implements API{
+public class APIPDLStrategy implements API{
     @Getter
     private JSONObject data;
 
@@ -22,7 +23,6 @@ public class API1Strategy implements API{
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        JSONObject res = new JSONObject(response.body());
-        this.data = res;
+        this.data = new JSONObject(response.body());
     }
 }

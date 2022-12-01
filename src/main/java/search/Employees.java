@@ -1,4 +1,4 @@
-package info;
+package search;
 
 import org.json.JSONObject;
 
@@ -11,5 +11,4 @@ public class Employees {
             return "Not found";
         }
     }
-
 }
