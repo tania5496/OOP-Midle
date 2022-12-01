@@ -1,5 +1,4 @@
-package org.example;
-
+package parser;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
