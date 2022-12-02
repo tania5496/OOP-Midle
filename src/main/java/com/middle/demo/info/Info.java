@@ -1,25 +1,26 @@
-package info;
+package com.middle.demo.info;
 
 
+import com.middle.demo.api.APIPDLStrategy;
+import com.middle.demo.parser.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
-import api.APIBrandfetchStrategy;
-import api.APIPDLStrategy;
+import com.middle.demo.api.APIBrandfetchStrategy;
 import org.json.JSONObject;
 import org.jsoup.nodes.Document;
-import parser.*;
-import search.*;
+import com.middle.demo.search.*;
 
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 @Entity
 @Table
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Setter
+@ToString
 public class Info {
     @Id
     private String domain;
@@ -115,5 +116,10 @@ public class Info {
         catch(ArrayIndexOutOfBoundsException e){
             address = "Not found";
         }
+    }
+
+    public static void main(String[] args) {
+        Info info = new Info("ucu.edu.ua");
+        System.out.println(info);
     }
 }

@@ -1,4 +1,4 @@
-package parser;
+package com.middle.demo.parser;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import org.jsoup.Jsoup;

@@ -1,4 +1,4 @@
-package parser;
+package com.middle.demo.parser;
 import java.util.ArrayList;
 
 import lombok.Getter;

@@ -1,6 +1,5 @@
 package com.middle.demo.search;
 
-import api.APIPDLStrategy;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

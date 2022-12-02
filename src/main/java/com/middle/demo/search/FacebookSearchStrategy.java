@@ -1,7 +1,5 @@
 package com.middle.demo.search;
 
-import api.APIBrandfetchStrategy;
-import api.APIPDLStrategy;
 import lombok.SneakyThrows;
 import org.json.JSONArray;
 import org.json.JSONException;
