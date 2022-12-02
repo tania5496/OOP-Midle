@@ -22,7 +22,10 @@ public class InfoService {
         if (info_repository.findById(domain).isPresent()){
             return info_repository.findById(domain).get();
         }
-        Info new_info = new Info(domain, "", "", "", "", "", "", "");
+        Info new_info = new Info(domain);
+        if (new_info.getDomain() == null){
+            return new_info;
+        }
         addInfo(new_info);
         return new_info;
     }
