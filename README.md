@@ -2,15 +2,17 @@
 
 1) шось там з постгресом
 
-2) In browser: http://localhost:8080/request/{domain}
+2) Run DemoApplication.java
 
-3) Press enter
+3) In browser: http://localhost:8080/request/{domain}
 
-4) Wait...
+4) Press enter
 
 5) Wait...
 
-6) Almost there...
+6) Wait...
 
-7) Observe the result
+7) Almost there...
+
+8) Observe the result
 
