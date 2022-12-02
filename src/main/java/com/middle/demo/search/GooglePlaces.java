@@ -18,10 +18,5 @@ public class GooglePlaces {
         context.shutdown();
         return address;
     }
-
-    public static void main(String[] args) {
-        String address = GooglePlaces.searchaddress("ucu.edu.ua");
-        System.out.println(address);
-    }
 }
 

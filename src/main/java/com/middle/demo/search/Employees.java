@@ -6,7 +6,7 @@ import org.json.JSONObject;
 public class Employees {
     public String getEmployees(JSONObject api1) {
         try {
-            return api1.getString("size");
+            return Integer.toString(api1.getInt("employee_count"));
         }
         catch (NullPointerException | JSONException e) {
             return "Not found";
