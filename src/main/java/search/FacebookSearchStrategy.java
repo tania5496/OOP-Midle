@@ -13,7 +13,7 @@ public class FacebookSearchStrategy implements Search {
         JSONArray arr = json_data.getJSONArray("links");
         for(int i = 0; i < arr.length(); ++i){
             if (arr.getJSONObject(i).getString("name").equals("facebook")){
-                return arr.getJSONObject(i).getString("search");
+                return arr.getJSONObject(i).getString("url");
             }
         }
         return "Not found";

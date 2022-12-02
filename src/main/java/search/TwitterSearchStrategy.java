@@ -1,5 +1,6 @@
 package search;
 
+import api.APIBrandfetchStrategy;
 import api.APIPDLStrategy;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,7 +12,7 @@ public class TwitterSearchStrategy implements Search {
         JSONArray arr = json_data.getJSONArray("links");
         for(int i = 0; i < arr.length(); ++i){
             if (arr.getJSONObject(i).getString("name").equals("twitter")){
-                return arr.getJSONObject(i).getString("search");
+                return arr.getJSONObject(i).getString("url");
             }
         }
         return "Not found";
@@ -25,5 +26,11 @@ public class TwitterSearchStrategy implements Search {
         catch (JSONException e) {
             return "Not found";
         }
+    }
+
+    public static void main(String[] args) {
+        APIBrandfetchStrategy apiBrandfetchStrategy = new APIBrandfetchStrategy();
+        apiBrandfetchStrategy.getInfo("ucu.edu.ua");
+        System.out.println(new TwitterSearchStrategy().searchwithBrandfetch(apiBrandfetchStrategy.getData()));
     }
 }

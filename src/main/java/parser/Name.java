@@ -1,15 +1,19 @@
 package parser;
+import lombok.Getter;
+import lombok.SneakyThrows;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import java.io.IOException;
 
 public class Name {
     private Document doc;
+    @Getter
     private String name;
-    public void findName() throws IOException {
+    @SneakyThrows
+    public void findName(){
         name = doc.title();
     }
-    Name(Document doc){
+    public Name(Document doc){
         this.doc = doc;
     }
 }
