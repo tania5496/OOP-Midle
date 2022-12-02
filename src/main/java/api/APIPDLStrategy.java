@@ -23,6 +23,12 @@ public class APIPDLStrategy implements API{
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
         this.data = new JSONObject(response.body());
+    }
+
+    public static void main(String[] args) {
+        APIPDLStrategy apipdlStrategy = new APIPDLStrategy();
+        apipdlStrategy.getInfo("ucu.edu.ua");
     }
 }

@@ -1,9 +1,13 @@
 package search;
 
-import api.APIBrandfetchStrategy;
 import lombok.SneakyThrows;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class IconSearchStrategy implements Search_JPG{
     @Override @SneakyThrows
@@ -15,5 +19,11 @@ public class IconSearchStrategy implements Search_JPG{
             }
         }
         return "Not found";
+    }
+
+    public String searchParser(Document doc) {
+        ArrayList<Element> icons = doc.select("head > link[rel=shortcut icon]");
+        String icon = icons.get(0).attr("abs:href");
+        return icon;
     }
 }

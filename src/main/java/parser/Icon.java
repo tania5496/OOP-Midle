@@ -11,7 +11,6 @@ public class Icon{
     private String icon;
     public void findIcon() throws IOException {
         ArrayList<Element> icons = doc.select("head > link[rel=shortcut icon]");
-//        System.out.println(title);
         icon = icons.get(0).attr("abs:href");
         System.out.println(icon);
     }

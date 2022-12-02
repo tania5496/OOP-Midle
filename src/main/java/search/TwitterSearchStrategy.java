@@ -1,9 +1,13 @@
 package search;
 
-import api.APIPDLStrategy;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class TwitterSearchStrategy implements Search {
     @Override
@@ -25,5 +29,12 @@ public class TwitterSearchStrategy implements Search {
         catch (JSONException e) {
             return "Not found";
         }
+    }
+
+    @Override
+    public String searchParser(Document doc) {
+        ArrayList<Element> twitterLink = doc.select("a[href^=https://twitter.com/]");
+        String twitter = twitterLink.get(0).attr("abs:href");
+        return twitter;
     }
 }
