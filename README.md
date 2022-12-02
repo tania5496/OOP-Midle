@@ -1,5 +1,11 @@
 # OOP-Midle
+## Team
+- [Sofiia Folvarochna](https://github.com/sofiiafolv)
+- [Tetiana Budii](https://github.com/tania5496)
+- [Tetiana Vinnik](https://github.com/tetianavinnik)
+- [Yaroslav Klym](https://github.com/KOlegaBB)
 
+## Usage
 1) Run local postgres database
 
 2) Run DemoApplication.java
