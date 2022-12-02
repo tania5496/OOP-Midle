@@ -1,35 +1,34 @@
 package info;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.*;
 import api.APIBrandfetchStrategy;
 import api.APIPDLStrategy;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.SneakyThrows;
-import lombok.ToString;
 import org.json.JSONObject;
 import org.jsoup.nodes.Document;
 import parser.*;
 import search.*;
 
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 
-@ToString
+@Entity
+@Table
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Info {
+    @Id
     private String domain;
-    @Getter
     private String name = null;
-    @Getter
     private String twitter = null;
-    @Getter
     private String facebook = null;
-    @Getter
     private String logo = null;
-    @Getter
     private String icon = null;
-    @Getter
     private String employees = null;
-    @Getter
     private String address = null;
 
     @SneakyThrows
@@ -117,9 +116,4 @@ public class Info {
             address = "Not found";
         }
     }
-    public static void main(String[] args) {
-        Info info = new Info("google");
-        System.out.println(info);
-    }
-
 }
